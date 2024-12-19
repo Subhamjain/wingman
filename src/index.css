@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --sidebar-bg-color: #115E56;
+  --sidebar-icon-color:#CCFBEF;
+  --sidebar-border-color:#134E48;
+  --header-text-color:#212636;
+  --header-border-color:#DCDFE4;
+  --insights-heading-color:#667085;
+}
+
+.radial-gradient{
+  background: 
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1), transparent 70%),
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1), transparent 70%),
+        radial-gradient(circle, #15b79f, #0e9382);
+}
