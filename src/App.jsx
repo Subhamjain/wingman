@@ -12,7 +12,7 @@ import tag from "./assets/tag.svg";
 import trendup from "./assets/trendup.svg";
 import trenddown from "./assets/trenddown.svg";
 import Table from "./components/Table/Table";
-import openingsoon from "./assets/openingSoon.mp4"
+import openingsoon from "./assets/OpeningSoon.mp4";
 
 const cardData = [
   {
@@ -73,17 +73,23 @@ const cardData = [
 
 function App() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const [selectedHeader , setSelectedHeader] =useState(0);
+  const [selectedHeader, setSelectedHeader] = useState(0);
   return (
     <div className="flex min-h-screen ">
       {/* Sidebar */}
-      <Sidebar selectedItemIndex={selectedItemIndex} setSelectedItemIndex={setSelectedItemIndex} />
+      <Sidebar
+        selectedItemIndex={selectedItemIndex}
+        setSelectedItemIndex={setSelectedItemIndex}
+      />
       {/* Main Content */}
       <main className="flex-1 ml-20  ">
         {/* Header Tabs */}
-        <Header selectedHeader ={selectedHeader} setSelectedHeader={setSelectedHeader}/>
+        <Header
+          selectedHeader={selectedHeader}
+          setSelectedHeader={setSelectedHeader}
+        />
 
-        {(selectedItemIndex  === 0 && selectedHeader === 0) ? (
+        {selectedItemIndex === 0 && selectedHeader === 0 ? (
           <>
             <div className="border border-[#DCDFE4] rounded-[20px] m-6 shadow mt-[130px] overflow-y-auto">
               <h2 className="text-lg font-semibold p-6">At a glance</h2>
@@ -99,24 +105,19 @@ function App() {
               <Table />
             </div>
           </>
-
         ) : (
           <div className="flex justify-center w-full mt-[130px]">
             <video
-            src={openingsoon}
-            className="rounded-lg h-96 "
-            autoPlay
-            loop
-            muted
-            controls={false} // Remove controls for a cleaner look
-          />
+              src={openingsoon}
+              className="rounded-lg h-96 "
+              autoPlay
+              loop
+              muted
+              controls={false} // Remove controls for a cleaner look
+            />
           </div>
-          
         )}
         {/* At a Glance Section */}
-
-
-
       </main>
     </div>
   );

@@ -4,7 +4,6 @@ import { BsBarChartLineFill } from "react-icons/bs";
 import ComboChart from "../Charts/ComboChart";
 import BarChart from "../Charts/BarChart";
 
-
 export default function Insights() {
   return (
     <section className="mt-8 p-6">
@@ -32,14 +31,8 @@ export default function Insights() {
           </div>
           <BarChart />
         </div>
-        <div className="w-full h-full rounded-[20px] col-span-1 bg-[url(caed.jpeg)] bg-contain bg-no-repeat bg-[#109785]">
-        </div>
+        <div className="w-full h-full rounded-[20px] col-span-1 bg-[url(caed.jpeg)] bg-contain bg-no-repeat bg-[#109785]"></div>
       </div>
-
-
-
-
-
     </section>
   );
 }

@@ -76,8 +76,12 @@ export default function BarChart() {
         {chartData.series.map((data, index) => {
           return (
             <div className="flex items-center mr-10">
-              <div className={`w-[16px] h-[4px] rounded-2xl bg-[${chartData.options.colors[index]}] mr-2`}></div>
-              <p className="font-inter text-[12px] text-[color:--insights-heading-color]">{data.name}</p>
+              <div
+                className={`w-[16px] h-[4px] rounded-2xl bg-[${chartData.options.colors[index]}] mr-2`}
+              ></div>
+              <p className="font-inter text-[12px] text-[color:--insights-heading-color]">
+                {data.name}
+              </p>
             </div>
           );
         })}

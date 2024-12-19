@@ -19,8 +19,7 @@ const navList = [
   },
 ];
 
-export const Sidebar = ({selectedItemIndex,setSelectedItemIndex}) => {
-
+export const Sidebar = ({ selectedItemIndex, setSelectedItemIndex }) => {
   return (
     <aside className="bg-sidebar-bg-color shadow-md fixed top-0 left-0 h-full overflow-hidden">
       <div className="m-6 pb-6 border-b border-b-[--sidebar-border-color]">
@@ -32,10 +31,11 @@ export const Sidebar = ({selectedItemIndex,setSelectedItemIndex}) => {
             <li className="mb-6" key={index}>
               <div
                 onClick={() => setSelectedItemIndex(index)}
-                className={`p-2 rounded ${selectedItemIndex === index
+                className={`p-2 rounded ${
+                  selectedItemIndex === index
                     ? "bg-white text-[color:--sidebar-bg-color]"
                     : "text-[color:--sidebar-icon-color] hover:bg-white hover:text-[color:--sidebar-bg-color]"
-                  }`}
+                }`}
               >
                 {item.icon}
               </div>

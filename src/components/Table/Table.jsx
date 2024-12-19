@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 import buds from "../../assets/earbud.svg";
-import arrowup from "../../assets/arrowup.svg"
+import arrowup from "../../assets/arrowup.svg";
 
 export default function Table() {
   const [data, setData] = useState([
@@ -58,7 +58,8 @@ export default function Table() {
   };
 
   const getSortIcon = (key) => {
-    if (sortConfig.key !== key) return <FaSort className="inline-block ml-2 text-gray-400" />;
+    if (sortConfig.key !== key)
+      return <FaSort className="inline-block ml-2 text-gray-400" />;
     return sortConfig.direction === "ascending" ? (
       <FaSortUp className="inline-block ml-2 text-gray-600" />
     ) : (
@@ -121,7 +122,9 @@ export default function Table() {
                 </td>
                 <td className="p-2">{row.time}</td>
                 <td className="p-2">${row.value.toFixed(2)}</td>
-                <td className="p-2 text-[16px] font-[700]">${row.commission}</td>
+                <td className="p-2 text-[16px] font-[700]">
+                  ${row.commission}
+                </td>
                 <td className="p-2 text-[#8A94A6] text-[12px] flex">
                   <div className="mr-2">view chat</div>
                   <div>
